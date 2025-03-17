@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahabharat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2 class="header-title">Mahabharat</h2>
+        <a href="index.html" class="home-link">Home</a>
+        
+    </header>
+    <main>
+        <div class="book-detail">
+            <img src="images/mahabharat.jpg" alt="Mahabharat Book Cover">
+            <p>The Mahabharat is an ancient Indian epic that narrates the Kurukshetra war and the fates of the Kaurava and Pandava princes.</p>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">📖 Summary</div>
+                <div class="accordion-content">
+                    <p>The Mahabharat, composed by Vyasa, details the struggle for power, duty, and righteousness in the great war of Kurukshetra.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">📜 Chapters</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Adi Parva</li>
+                        <li>Sabha Parva</li>
+                        <li>Vana Parva</li>
+                        <li>Virata Parva</li>
+                        <li>Udyoga Parva</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">🛒 Where to Buy</div>
+                <div class="accordion-content">
+                    <form class="purchase-form">
+                        <label for="purchase-link">Choose a purchase option:</label>
+                        <select id="purchase-link" onchange="window.location.href=this.value">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="https://amzn.in/d/5WNXNzz">Amazon</option>
+                            <option value="https://www.flipkart.com/mahabharata-box-set/p/itm510c4ca236458">Flipkart</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">⭐ Reviews</div>
+                <div class="accordion-content">
+                    <p>⭐⭐⭐⭐⭐ (5/5) - A timeless epic that teaches life lessons, duty, and philosophy.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Book Showcase | All rights reserved</p>
+    </footer>
+    <script>
+        function toggleAccordion(element) {
+            element.classList.toggle("active");
+            let content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
+
+<style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.book-detail {
+    text-align: center;
+    padding: 20px;
+}
+
+.book-detail img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.accordion {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.accordion-item {
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-title {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #ccc;
+}
+
+.active {
+    background-color: #0056b3;
+}
+
+.purchase-form {
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
